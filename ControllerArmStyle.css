@@ -1,0 +1,100 @@
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    vertical-align: top;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+#Save{
+    margin-top: 10px;
+    float: right;
+    width: 25%;
+    height: 80px;
+    margin-left: 1000px;
+}
+#ON{
+    float: right;
+    width: 25%;
+    height: 80px;
+    margin-top:180px;
+    text-align: center;
+
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#Off{
+    float: right;
+    width: 25%;
+    height: 80px;
+    margin-top:0px;
+    text-align: center;
+
+    font-size: 25px;
+    cursor: pointer;
+
+
+}
+.button{
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1{
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2{
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.button3{
+    background-color: white;
+    color: black;
+    border: 2px solid #b53131;
+}
+.button3:hover {
+    background-color: #b53131;
+    color: white;
+}

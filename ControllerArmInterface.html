@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>controller arm interface</title>
+    <link rel="stylesheet" href="ControllerArmStyle.css">
+   <!-- <script src="ControllerArmJS.js"> </script>-->
+
+
+
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+    function onoffHandler(){
+        currentvalue = document.getElementById('onoff').value;
+        if(currentvalue === "Off"){
+            document.getElementById("onoff").value="On";
+        }else{
+            document.getElementById("onoff").value="Off";
+        }
+    }
+</script>
+
+
+<div class="slidecontainer">
+    <form action="final.php" method="POST">
+
+        <button type="submit" name="on" value="on" id="ON" onclick="onoffHandler();" class="button button2">ON</button>
+
+    <h3>Motor 1</h3>
+        <input type="range" name="Motor1" min="0" max="180" value="90" class="slider" id="myRange"   >
+                 <p>Value: <span id="demo"></span></p>
+    <h3>Motor 2</h3>
+         <input type="range" name="Motor2" min="0" max="180" value="90" class="slider" id="myRange1">
+                 <p>Value: <span id="demo1"></span></p>
+    <h3>Motor 3</h3>
+          <input type="range" name="Motor3" min="0" max="180" value="90" class="slider" id="myRange2">
+
+        <button type="submit"  name="off" value="off" id="Off" onclick="onoffHandler();" class="button button3">OFF</button>
+        <br>
+                  <p>Value: <span id="demo2"></span></p>
+
+<!--Save--><button type="submit" name="save" value="save" class="button button1" id="Save" >Save</button>
+        <br>
+    <h3>Motor 4</h3>
+          <input type="range" name="Motor4" min="0" max="180" value="90" class="slider" id="myRange3">
+                  <p>Value: <span id="demo3"></span></p>
+    <h3>Motor 5</h3>
+          <input type="range" name="Motor5" min="0" max="180" value="90" class="slider" id="myRange4">
+                  <p>Value: <span id="demo4"></span></p>
+    <h3>Motor 6</h3>
+          <input type="range" name="Motor6" min="0" max="180" value="90" class="slider" id="myRange5">
+                   <p>Value: <span id="demo5"></span></p>
+
+    </form>
+</div>
+
+
+
+<script>
+
+
+
+
+    let slider = document.getElementById("myRange");
+    let slider1 = document.getElementById("myRange1");
+    let slider2 = document.getElementById("myRange2");
+    let slider3 = document.getElementById("myRange3");
+    let slider4 = document.getElementById("myRange4");
+    let slider5 = document.getElementById("myRange5");
+
+
+    let output = document.getElementById("demo");
+    let output1 = document.getElementById("demo1");
+    let output2 = document.getElementById("demo2");
+    let output3 = document.getElementById("demo3");
+    let output4 = document.getElementById("demo4");
+    let output5 = document.getElementById("demo5");
+
+    output.innerHTML = slider.value; // Display the default slider value
+    output1.innerHTML = slider1.value;
+    output2.innerHTML = slider2.value;
+    output3.innerHTML = slider3.value;
+    output4.innerHTML = slider4.value;
+    output5.innerHTML = slider5.value;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+    slider1.oninput = function() {
+        output1.innerHTML = this.value;
+    }
+    slider2.oninput = function() {
+        output2.innerHTML = this.value;
+    }
+    slider3.oninput = function() {
+        output3.innerHTML = this.value;
+    }
+    slider4.oninput = function() {
+        output4.innerHTML = this.value;
+    }
+    slider5.oninput = function() {
+        output5.innerHTML = this.value;
+
+
+
+        document.getElementById('reset').onclick = function(){
+            document.getElementById('myRange').value = 0;
+            document.getElementById('myRange1').value = 0;
+            document.getElementById('myRange2').value = 0;
+            document.getElementById('myRange3').value = 0;
+            document.getElementById('demo').innerHTML = 0;
+
+
+        };
+
+    }
+
+
+
+</script>
+
+
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "6d3f24e1-0324-4dcd-bfe8-b18da436fde0", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "b8450115-f5ef-43ff-9ddc-f84a9ad45f52", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+    });
+</script>
+
+
+</body>
+</html>

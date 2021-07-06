@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baseControlPanel</title>
+    <link rel="stylesheet" href="baseControlPanel.css">
+    
+</head>
+<body>
+
+    <div>
+        <form method="post" action="BaseData.php">
+
+            <button type="submit" class="button button1" id="forward" name="Forward" value="Forward" >Forward</button>
+            <br>
+            <button type="submit" class="button button3 " id="stop" name="Stop" value="Stop" >Stop</button>
+            <button type="submit" class="button button2" id="right"  name="Right1" value="Right1" >Right</button>
+            <button type="submit" class="button button4" id="left" name="Left1" value="Left" >Left</button>
+            <br>
+            <button type="submit"  class="button button5" id="backward" name="Backward" value="backward" >Backward</button>
+        </form>
+    </div>
+
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "6d3f24e1-0324-4dcd-bfe8-b18da436fde0", // The ID of this integration.
+            region: "eu-gb", // The region your integration is hosted in.
+            serviceInstanceID: "b8450115-f5ef-43ff-9ddc-f84a9ad45f52", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+        });
+    </script>
+    </body>
+</html>
